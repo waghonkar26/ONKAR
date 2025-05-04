@@ -1,0 +1,102 @@
+/* General body styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6b8ce3, #53df1c);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background-color: rgba(54, 15, 211, 0.85);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Navigation styles */
+nav {
+  background-color: #0962f2;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+nav a {
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #53df1c;
+  color: #000;
+  border-radius: 5px;
+}
+
+/* Section container */
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Card styles */
+.card {
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Headings */
+h1, h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  list-style-type: square;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+}
+

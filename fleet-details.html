@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truck Fleet Details</title>
+  <link rel="stylesheet" href="mylogistics.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
+    .section { padding: 40px; }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      max-width: 900px;
+      margin: 20px auto;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    .truck-type {
+      margin-bottom: 30px;
+    }
+    .truck-type h3 {
+      margin-bottom: 10px;
+      color: #0052D4;
+    }
+    .truck-type p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header style="background: linear-gradient(to right, #0052D4, #6FB1FC); color: white; padding: 30px; text-align: center;">
+    <h1>Fleet Capacity - Truck Details</h1>
+    <p>Explore load capacity and specifications by wheel type</p>
+  </header>
+
+  <section class="section">
+    <div class="card">
+      <div class="truck-type">
+        <h3>🚛 10-Wheel Truck</h3>
+        <p><strong>Load Capacity:</strong> 16 to 20 tons</p>
+        <p><strong>Usage:</strong> General cargo, construction material</p>
+      </div>
+
+      <div class="truck-type">
+        <h3>🚚 12-Wheel Truck</h3>
+        <p><strong>Load Capacity:</strong> 21 to 25 tons</p>
+        <p><strong>Usage:</strong> Bulk cargo, long-distance freight</p>
+      </div>
+
+      <div class="truck-type">
+        <h3>🚛 14-Wheel Truck</h3>
+        <p><strong>Load Capacity:</strong> 26 to 30 tons</p>
+        <p><strong>Usage:</strong> Heavy-duty goods, machinery, industrial load</p>
+      </div>
+    </div>
+  </section>
+  <hr style="margin: 50px 0;">
+
+  <hr style="margin: 50px 0;">
+
+  <div class="card">
+    <h2 style="text-align:center; color:#0052D4;">🚚 Book a Truck</h2>
+    <form id="truckForm" style="display:flex; flex-direction:column; gap:15px; max-width:600px; margin:auto;">
+      
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name" />
+  
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required placeholder="Enter phone number" />
+  
+      <label for="truck">Select Truck Type:</label>
+      <select id="truck" name="truck" required>
+        <option value="">-- Select Truck Type --</option>
+        <option value="10-wheel">10-Wheel Truck (16–20 tons)</option>
+        <option value="12-wheel">12-Wheel Truck (21–25 tons)</option>
+        <option value="14-wheel">14-Wheel Truck (26–30 tons)</option>
+      </select>
+  
+      <label for="location">Pickup Location:</label>
+      <input type="text" id="location" name="location" required placeholder="Enter pickup location" />
+  
+      <label for="destination">Delivery Destination:</label>
+      <input type="text" id="destination" name="destination" required placeholder="Enter destination" />
+  
+      <button type="submit" style="padding:10px; background:#0052D4; color:white; border:none; border-radius:6px; cursor:pointer;">
+        Submit Booking Request
+      </button>
+    </form>
+  </div>
+  
+  <!-- ✅ Alert on Form Submit -->
+  <script>
+    document.getElementById("truckForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent real submission
+      alert("✅ Your truck booking request has been submitted!\nWe will contact you shortly.");
+      this.reset(); // clear form
+    });
+  </script>
+  
+  
+  <footer style="text-align:center; padding: 20px; background: #f1f1f1;">
+    &copy; 2025 My Logistics | Created by ONKAR WAGH
+  </footer>
+
+</body>
+</html>

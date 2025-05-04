@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Industry-Specific Solutions | MY LOGISTICS</title>
+  <link rel="stylesheet" href="mylogistics.css" />
+</head>
+<body>
+  <header>
+    <h1>Industry-Specific Logistics Solutions</h1>
+    <p>Customized services for retail, construction, automotive, and more.</p>
+  </header>
+
+  <!-- Interactive Service Selector -->
+  <section class="section">
+    <h2>Find Your Industry Solution</h2>
+    <form>
+      <label for="industry">Choose Your Industry:</label>
+      <select id="industry" name="industry">
+        <option value="retail">Retail & E-Commerce</option>
+        <option value="construction">Construction</option>
+        <option value="automotive">Automotive</option>
+      </select>
+
+      <label for="service">Choose Service Type:</label>
+      <select id="service" name="service">
+        <option value="delivery">Delivery</option>
+        <option value="storage">Storage</option>
+        <option value="consulting">Consulting</option>
+      </select>
+
+      <button type="submit" onclick="showRecommendedServices(event)">Find Solution</button>
+    </form>
+
+    <div id="recommendedServices"></div>
+  </section>
+
+  <script>
+    function showRecommendedServices(event) {
+      event.preventDefault();
+      const industry = document.getElementById('industry').value;
+      const service = document.getElementById('service').value;
+      
+      let message = `You chose ${industry} industry and ${service} service.`;
+      document.getElementById('recommendedServices').innerText = message;
+    }
+  </script>
+
+  <!-- Customer Success Stories -->
+  <section class="section">
+    <h2>Customer Success Stories</h2>
+    <div class="case-study">
+      <h3>Retail Industry: Efficient E-Commerce Delivery</h3>
+      <p>Our logistics solutions helped a major e-commerce retailer streamline their delivery process, cutting delivery times by 30% and improving customer satisfaction.</p>
+    </div>
+
+    <div class="case-study">
+      <h3>Construction Industry: On-Time Material Delivery</h3>
+      <p>We provided a construction company with customized transportation solutions to ensure that construction materials were delivered on time, avoiding project delays.</p>
+    </div>
+  </section>
+
+  <!-- Downloadable Resources -->
+  <section class="section">
+    <h2>Download Our Resources</h2>
+    <p>Get detailed information about our logistics solutions and how we can help your business grow.</p>
+    <ul>
+      <li><a href="brochure1.pdf" download>Download Service Brochure</a></li>
+      <li><a href="project-my.pdf" download>Download Industry Trends Report</a></li>
+    </ul>
+  </section>
+
+  <!-- Interactive Cost Estimator -->
+  <section class="section">
+    <h2>Get an Instant Quote</h2>
+    <form id="quote-form">
+      <label for="cargo-weight">Cargo Weight (in kg):</label>
+      <input type="number" id="cargo-weight" name="cargo-weight" required>
+
+      <label for="distance">Distance (in km):</label>
+      <input type="number" id="distance" name="distance" required>
+
+      <label for="truck-type">Choose Truck Type:</label>
+      <select id="truck-type" name="truck-type">
+        <option value="10-wheel">10 Wheel</option>
+        <option value="12-wheel">12 Wheel</option>
+        <option value="14-wheel">14 Wheel</option>
+      </select>
+
+      <button type="submit">Get Quote</button>
+    </form>
+
+    <div id="quote-result"></div>
+  </section>
+
+  <script>
+    document.getElementById('quote-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const weight = parseFloat(document.getElementById('cargo-weight').value);
+      const distance = parseFloat(document.getElementById('distance').value);
+      const truckType = document.getElementById('truck-type').value;
+      
+      const baseRate = 50; // base rate in currency units
+      let truckMultiplier = 1;
+
+      if (truckType === "12-wheel") {
+        truckMultiplier = 1.2;
+      } else if (truckType === "14-wheel") {
+        truckMultiplier = 1.5;
+      }
+
+      const totalCost = (baseRate * weight * distance * truckMultiplier) / 1000;
+      document.getElementById('quote-result').innerText = `Estimated cost: ${totalCost.toFixed(2)} units.`;
+    });
+  </script>
+
+  <!-- Request a Demo -->
+  <section class="section">
+    <h2>Request a Free Consultation</h2>
+    <p>Not sure which logistics solution is right for you? Request a free consultation and we'll guide you through our services.</p>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="industry">Your Industry:</label>
+      <select id="industry" name="industry">
+        <option value="retail">Retail</option>
+        <option value="construction">Construction</option>
+        <option value="automotive">Automotive</option>
+      </select>
+
+      <button type="submit">Request Consultation</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Logistics | Created by ONKAR WAGH</p>
+  </footer>
+</body>
+</html>
+
