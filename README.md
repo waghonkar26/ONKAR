@@ -1,2 +1,198 @@
 # ONKAR
 MY LOGISTICS TRANSPORT
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MY LOGISTICS</title>
+  <link rel="stylesheet" href="mylogistics.css" />
+  <script src="mylogistics.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    nav {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0052D4;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #6FB1FC;
+    }
+    .section {
+      padding: 50px 20px;
+      background-color: #f8f9fa;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+    .btn {
+      display: inline-block;
+      background: #0052D4;
+      color: white;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #4364F7;
+    }
+    iframe {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .form-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .form-group {
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group.full {
+      flex: 1 1 100%;
+    }
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      transition: 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header style="background: linear-gradient(to right, #0052D4, #4364F7, #6FB1FC); color: white; padding: 40px 20px; text-align: center;">
+    <h1 style="font-size: 2.8rem; margin: 0;">MY LOGISTICS</h1>
+    <p style="font-size: 1.2rem; margin-top: 10px;">Comfortable. Fast. National and International Transport Services.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Our Services</a>
+    <a href="#fleet">Fleet</a>
+    <a href="#contact">Contact</a>
+    <a href="#inquery">Inquery</a>
+     
+  </nav>
+
+  <section class="section" id="about">
+    <div class="card">
+      <h2>About Us</h2>
+      <p>MY LOGISTICS is a trusted name in freight and logistics. We offer dependable transportation services for businesses across India and the world.</p>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="card">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Goods Transportation (Local & National)</li>
+        <li>Warehousing Solutions</li>
+        <li>Express Delivery</li>
+        <li>Logistics Consulting</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="fleet">
+    <div class="card">
+      <h2>Our Fleet</h2>
+      <p>We have a wide range of vehicles including trucks, mini-vans, and trailers, equipped for safe and efficient delivery of all kinds of cargo.</p>
+      <img src="ttruck.jpeg" alt="Truck" style="width:100%; border-radius: 10px; margin-top: 15px;" />
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>Email: mylog0020@gmail.com</p>
+      <p>Phone: +91-9876543210</p>
+      <p>Office: Fort Songadh, Tapi District, Gujarat</p>
+      <a href="mailto:mylog0020@gmail.com" class="btn">Send Email</a>
+      <div style="margin-top: 20px;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.419570170203!2d73.56389351493297!3d21.16413378592764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be088d04140aaab%3A0x2f9262a610dbe5cf!2sSongadh%20Fort!5e0!3m2!1sen!2sin!4v1713781779460!5m2!1sen!2sin" 
+          width="100%" 
+          height="300" 
+          style="border:0; border-radius: 8px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="inquiry">
+    <div class="card">
+      <h2 style="text-align:center;">Quick Inquiry</h2>
+      <p style="text-align:center; color: #666;">Have a question or need a quote? Fill the form below!</p>
+      <form action="#" method="POST" class="form-grid">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+91-9876543210" required />
+        </div>
+        <div class="form-group full">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+        <div class="form-group full" style="text-align: center;">
+          <button type="submit" class="btn">📨 Send Inquiry</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  
+    <a href="fleet-details.html" class="nav-box">Truck Types</a>
+
+    <a href="industry-solutions.html">Industry Solutions</a>
+  
+ 
+
+
+
+  <footer>
+    <p style="text-align:center; padding: 20px; background: #11e10a;">&copy; 2025 My Logistics | Created by ONKAR WAGH</p>
+  </footer>
+</body>
+</html>
+
+
+  
